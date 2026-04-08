@@ -1,0 +1,10 @@
+groups:
+- name: alert-rules
+  rules:
+  - alert: HighErrorRate
+    expr: errors_total > 5
+    for: 10s
+    labels:
+      severity: critical
+    annotations:
+      description: "High error rate detected"
